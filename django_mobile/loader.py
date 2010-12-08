@@ -22,7 +22,7 @@ class Loader(BaseLoader):
             template_name = settings.FLAVOURS_TEMPLATE_PREFIX + template_name
         return template_name
 
-    def load_template_source(self, template_name, template_dirs=None):
+    def load_template(self, template_name, template_dirs=None):
         template_name = self.prepare_template_name(template_name)
         for loader in self.template_source_loaders:
             try:
